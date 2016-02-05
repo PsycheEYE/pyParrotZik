@@ -19,7 +19,8 @@ http://goo.gl/dXij2t
 ## Tray Indicator Applet Usage
 
 1. Connect Parrot Zik with standard bluetooth connection 
-2. Run applet ./ParrotZikTray.py
+2. Run sudo python setup.py install
+3. Run parrot_zik_tray
 
 ### Requirement
 

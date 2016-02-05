@@ -78,7 +78,7 @@ class ResourceManagerBase(object):
             self.sock.recv(30)
         else:
             self.sock.recv(7)
-        return BeautifulSoup(self.sock.recv(1024))
+        return BeautifulSoup(self.sock.recv(1024),  "lxml")
 
     def close(self):
         self.sock.close()
@@ -132,7 +132,7 @@ class Version2ResourceManager(ResourceManagerBase):
         '/api/audio/equalizer/preset_value': ['set'],
         '/api/audio/noise_cancellation/enabled': ['get', 'set'],
         '/api/audio/noise_control/enabled': ['get', 'set'],
-        '/api/audio/noise_control': ['get'],
+        '/api/audio/noise_control': ['get', 'set'],
         '/api/audio/noise_control/phone_mode': ['get', 'set'],
         '/api/audio/noise': ['get'],
         '/api/audio/param_equalizer/value': ['set'],
