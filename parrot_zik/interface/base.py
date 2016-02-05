@@ -86,6 +86,8 @@ class ParrotZikBaseInterface(object):
                 self.indicator.setIcon("zik-battery-060")
             elif battery_level > 20:
                 self.indicator.setIcon("zik-battery-040")
+            elif battery_level > 5:
+                self.indicator.setIcon("zik-battery-020")
             else:
                 self.indicator.setIcon("zik-battery-low")
 
